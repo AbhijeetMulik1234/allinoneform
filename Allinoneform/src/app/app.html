@@ -76,19 +76,21 @@
       >
         <div class="col-md-8">
           <input
-            formControlName="number"
+            formControlName="phonenumber"
             placeholder="Enter Mobile Number"
             class="form-control"
             [ngClass]="{
               'is-invalid':
-                Registrationform.get('number')?.touched &&
-                Registrationform.get('number')?.invalid
+                Registrationform.get('phonenumber')?.touched &&
+                Registrationform.get('phonenumber')?.invalid
             }"
           />
           <div
             class="invalid-feedback"
-            *ngIf="Registrationform.get('number')?.touched &&
-        Registrationform.get('number')?.hasError.('required')"
+            *ngIf="
+              Registrationform.get('phonenumber')?.touched &&
+              Registrationform.get('phonenumber')?.hasError('required')
+            "
           >
             Mobile Number is required
           </div>

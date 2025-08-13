@@ -53,7 +53,10 @@ export class App {
   // // Create a new mobile number FormGroup
   newMobileNumber(): FormGroup {
     return this.fb.group({
-      number: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
+      phonenumber: [
+        '',
+        [Validators.required, Validators.pattern('^[0-9]{10}$')],
+      ],
     });
   }
 
